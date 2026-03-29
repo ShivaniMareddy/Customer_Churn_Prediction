@@ -193,7 +193,7 @@ if file is not None:
             input_data.append(val)
 
         input_array = scaler.transform([input_data])
-
+        
         if st.button("Predict"):
             pred = selected_model.predict(input_array)[0]
             prob = selected_model.predict_proba(input_array)[0][1]
